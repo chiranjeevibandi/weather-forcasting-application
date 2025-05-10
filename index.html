@@ -11,7 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(to right, #4CAF50, #2196F3);
+            background: linear-gradient(to right,rgb(12, 146, 255),rgb(76, 255, 94));
         }
         
         .container {
@@ -25,10 +25,12 @@
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             width: 450px;
+            transition: all 0.3s ease;
         }
         
         .weather-card:hover {
             transform: scale(1.05);
+            box-shadow: 4px 4px 20px gray;
         }
         
         #city-input {
@@ -42,7 +44,7 @@
         
         #city-input:focus {
             outline: none;
-            border-color: #2196F3;
+            border-color: rgb(255, 69, 69);
         }
         
         #city-input::placeholder {
@@ -57,10 +59,15 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            transition:all 0.3s ease;
         }
         
         #city-input-btn:hover {
-            background-color: #1565C0;
+            transform: scale(0.95);
+            color: #1565C0;
+            font-weight: 600;
+            background-color:white;
+            border: 1px solid black;
         }
         
         #weather-info {
@@ -80,16 +87,19 @@
         
         #description {
             font-size: 18px;
+            font-weight: 600;
             margin-bottom: 10px;
         }
         
         #wind-speed {
             font-size: 16px;
+            font-weight: 600;
             color: rgb(255, 0, 0);
         }
         
         #date {
             font-size: 14px;
+            font-weight: 600;
             color: rgb(255, 0, 0);
         }
     </style>
@@ -144,7 +154,7 @@ function weatherShowFn(data) {
 	<div class="container">
 		<div class="weather-card">
 			<h3 style="color: green;">
-				Weather App
+				Forcast Weather
 			</h3>
 			<input type="text" id="city-input"
 				placeholder="Enter city name">
@@ -165,6 +175,6 @@ function weatherShowFn(data) {
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://momentjs.com/downloads/moment.min.js"></script>
-	<script src="script2.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
